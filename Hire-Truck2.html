@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<meta name="robots" content="" />
+<meta name="description" content="" />
+<meta name="format-detection" content="telephone=no">
+<!-- Favicons Icon -->
+<link rel="icon" href="images/favicon.html" type="image/x-icon" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+<!-- Page Title Here -->
+<title>CargoZone - Transport and Cargo Template</title>
+<!-- Mobile Specific -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+	<![endif]-->
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<link rel="stylesheet" type="text/css" href="plugins/scroll/scrollbar.css">
+<link class="skin"  rel="stylesheet" type="text/css" href="css/skin/skin-2.css">
+<link  rel="stylesheet" type="text/css" href="css/templete.css">
+<link rel="stylesheet" type="text/css" href="css/switcher.css"/>
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Poppins:300,400,500,600,700|Roboto:100,300,400,500,700,900" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type='text/javascript'> 
+var sub_service_id=12
+var servicess_name = ["Ahmedabad","Bangalore","Chandigarh","Chennai","Delhi","Faridabad","Gurgaon","Hyderabad","Jaipur","Kolkata","Mumbai","Noida","Pune","Vadodara"];
+
+</script>
+
+<script>
+function step2_next_click()
+{
+	var choice=$( "input:radio[name=per_com_type]:checked" ).val();
+	if(choice=="Personal")
+	{
+		document.getElementById('step3_personal_type').style.display = 'block';
+		document.getElementById('step3_professional_type').style.display = 'none';
+	}
+	else
+	{
+		document.getElementById('step3_personal_type').style.display = 'none';
+		document.getElementById('step3_professional_type').style.display = 'block';
+	}	
+}
+
+function final_box_option(box)
+{
+	if(box.checked)
+		document.getElementById('final_box_option').style.display = 'block';
+	else
+		document.getElementById('final_box_option').style.display = 'none';
+}
+function final_labour_option(box)
+{
+	if(box.checked)
+		document.getElementById('final_labour_option').style.display = 'block';
+	else
+		document.getElementById('final_labour_option').style.display = 'none';
+}
+function next_enable_disable()
+{
+	var choice=$( "#datepicker2" ).val();
+	if(choice=="")
+	{
+		$("#date_step").attr( "disabled", "disabled" );
+	}
+	else
+	{
+		$('#date_step').removeAttr('disabled');
+	}
+	
+}
+
+</script>
+<script type="text/javascript" src="#"></script>
+<script type="text/javascript">
+(function($,W,D)
+{
+    var JQUERY4U = {};
+
+    JQUERY4U.UTIL =
+    {
+        setupFormValidation: function()
+        {
+		 $("#home-enq-form").validate({
+                rules: {					
+                    
+					name: "required",
+                    mobile: {
+                        required: true,
+                        minlength: 10
+                    },
+				 email: "required",
+				 captcha: {
+                        required: true,
+                        minlength: 4
+                    }
+				},
+                messages: {					
+                    					
+					name: "Required",				
+                    mobile: {
+                        required: "Required",
+                        minlength: "Not Valid"
+                    },                 
+                    email: "Required",
+					captcha: "Required"						
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+$(D).ready(function($) {
+        JQUERY4U.UTIL.setupFormValidation();
+    });
+
+})(jQuery, window, document);
+</script>
+</head>
+
+<body>
+<header>
+	<div class="container-fluid">
+    	<div class="row">
+        	<div class="col-xs-8 col-sm-6"><img src="images/logo7.png" class="logo" width="80"></div>
+            <div class="col-xs-4 col-sm-6"><div class="mtoggle"><a href="#"><img src="images/1.png"></a></div></div>
+        </div>
+    </div>
+</header>
+<div class="form-set">
+	<div class="foram-header">Hire Truck</div>
+    <div class="foram-body">
+		<a class="btn btn-warning ccb"  href="index.html" style="position:absolute; top:-10px; right:-10px"><i class="fa fa-times"></i></a>
+        <form class="registration-form" action="index.html" id="home-enq-form" name="home-enq-form" method="post">
+        			<input type="hidden" name="redirect" value="#" />
+			<input type="hidden" name="enquery_msg" id="enquery_msg" value="lmartenquery" />
+			<input type="hidden" name="service_id" id="service_id" value="50" />
+            <input type="hidden" name="service_name" id="service_name" value="Hire Truck Tempo" />
+            <input type="hidden" name="sub_service_name" id="sub_service_name" value="Tempo" />
+            <input type="hidden" name="sub_service_id" id="sub_service_id" value="12" />
+            <input type="hidden" name="thanks_url" id="thanks_url" value="home" />
+          
+                    	<fieldset style="display: block;">
+	          <div id="step1">
+            	<div class="userform-top">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" style="width: 10%"></div>
+                    </div>
+                    <div class="text-center completed">10 % Completed</div>
+                 </div>     
+                                    <div class="main-form" id="step2_tempo_type">
+                 	<h2 class="head2">Tempo Type<span class="bordered"></span></h2>
+                 	<ul class="form-list">            
+                       <li>       
+                            <input id="mahindra_alpha" class="magic-radio" type="radio" value="Mahindra Alfa Load" name="truck_tempo" checked>
+                            <label for="mahindra_alpha">  Mahindra Alfa Load </label>
+                       </li>
+                       <li>       
+                            <input id="bajaj_maxima" class="magic-radio" type="radio" value="Bajaj Maxima C" name="truck_tempo">
+                            <label for="bajaj_maxima">Bajaj Maxima C </label>
+                       </li>
+                       <li>       
+                            <input id="atul_gem" class="magic-radio" type="radio" value="Atul GEM" name="truck_tempo">
+                            <label for="atul_gem"> Atul GEM</label>
+                       </li>
+                      
+                        <li>       
+                            <input id="other_tempo" class="magic-radio" type="radio" value="Other" name="truck_tempo">
+                            <label for="other_tempo"> Other </label>
+                       </li>
+                	</ul>
+                </div>
+                          
+                 <div class="foram-footer">
+                 	<div class="row">
+                    	<div class="col-xs-6 col-sm-6">
+                        	
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                        	<button type="button" class="btn nxtbtn btn-next pull-right btn-primary" id="step1_next">NEXT</button>
+                        </div>
+                    </div>
+                 </div> 
+            </div>
+			</fieldset>
+                        <fieldset>
+                        <div id="step2">
+            	<div class="userform-top">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" style="width: 20%"></div>
+                    </div>
+                    <div class="text-center completed">20 % Completed</div>
+                 </div>
+                 <div id="step2_error"></div>
+                 <div class="main-form">
+                 	<h2 class="head2" >Select An Option<span class="bordered"></span></h2>
+                 	<ul class="form-list">            
+                       <li>       
+                            <input id="personal" class="magic-radio" type="radio" value="Personal" name="per_com_type" checked>
+                            <label for="personal"> Personal </label>
+                       </li>
+                       <li>       
+                            <input id="commercial" class="magic-radio" type="radio" value="Commercial" name="per_com_type">
+                            <label for="commercial"> Commercial </label>
+                       </li>
+                                           
+                    </ul>
+                 </div>
+                 <div class="foram-footer">
+                 	<div class="row">
+                    	 <div class="col-xs-6 col-sm-6">
+                                                  	<button type="button" class="btn prvbtn btn-previous btn-default" >BACK</button>
+                                                    </div>
+                        <div class="col-xs-6 col-sm-6">
+                        	<button type="button"  class="btn nxtbtn btn-next pull-right btn-primary" id="step2_next" onClick="step2_next_click();">NEXT</button>
+                        </div>
+                    </div>
+                 </div>           
+            </div>
+			</fieldset>
+            <fieldset>
+               	<div class="userform-top">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" style="width: 30%"></div>
+                    </div>
+                    <div class="text-center completed">30 % Completed</div>
+                 </div>
+                 <div class="main-form">
+                 	<h2 class="head2" >Select a option<span class="bordered"></span></h2>
+                 	<ul class="form-list" id="step3_personal_type"> 
+                              
+                       <li>       
+                            <input id="household" class="magic-radio" type="radio" value="Household"  name="per_com_option" checked >
+                            <label for="household"> Household </label>
+                       </li>
+                       <li>       
+                            <input id="home_shifting" class="magic-radio" type="radio" value="Home shifting"  name="per_com_option" >
+                            <label for="home_shifting"> Home shifting </label>
+                       </li>
+                       <li>       
+                            <input id="agri_and_food" class="magic-radio" type="radio" value="Agriculture and food"  name="per_com_option" >
+                            <label for="agri_and_food"> Agriculture and food </label>
+                       </li>
+                       <li>       
+                            <input id="construction_material" class="magic-radio" type="radio" value="Construction material"  name="per_com_option" >
+                            <label for="construction_material"> Construction material </label>
+                       </li>
+                      
+                       <li>       
+                            <input id="machinery" class="magic-radio" type="radio" value="Machinery"  name="per_com_option" >
+                            <label for="machinery"> Machinery </label>
+                       </li>
+                       </ul>
+                    <ul class="form-list" id="step3_professional_type">
+                  
+                       <li>       
+                            <input id="chemical_and_liquid" class="magic-radio" type="radio" value="Chemical and Liquid"  name="per_com_option" checked>
+                            <label for="chemical_and_liquid"> Chemical and Liquid </label>
+                       </li>
+                       <li>       
+                            <input id="retails" class="magic-radio" type="radio" value="Retails"  name="per_com_option" >
+                            <label for="retails"> Retails </label>
+                       </li>
+                       <li>       
+                            <input id="fertilizers" class="magic-radio" type="radio" value="Fertilizers"  name="per_com_option" >
+                            <label for="fertilizers"> Fertilizers </label>
+                       </li>
+                       <li>       
+                            <input id="industry_goods" class="magic-radio" type="radio" value="Industry Goods"  name="per_com_option" >
+                            <label for="industry_goods"> Industry Goods </label>
+                       </li>
+                       <li>       
+                            <input id="textiles" class="magic-radio" type="radio" value="Textiles"  name="per_com_option" >
+                            <label for="textiles"> Textiles </label>
+                       </li>
+                       <li>       
+                            <input id="automotives" class="magic-radio" type="radio" value="Automotives"  name="per_com_option" >
+                            <label for="automotives"> Automotives </label>
+                       </li>
+                       </ul>
+                     <ul class="form-list" id="step3_professional_type">
+                      <li>       
+                            <input id="electronics" class="magic-radio" type="radio" value="Electronics"  name="per_com_option" >
+                            <label for="electronics"> Electronics </label>
+                       </li>
+                       <li>       
+                            <input id="furniture" class="magic-radio" type="radio" value="Furniture"  name="per_com_option" >
+                            <label for="furniture"> Furniture </label>
+                       </li>
+                       <li>       
+                            <input id="others" class="magic-radio" type="radio" value="Others" name="per_com_option" >
+                            <label for="others"> Others </label>
+                       </li>
+                                           
+                    </ul>
+                 </div>
+                 <div class="foram-footer">
+                 	<div class="row">
+                    	 <div class="col-xs-6 col-sm-6">
+                        	<button type="button" class="btn prvbtn btn-previous btn-default">BACK</button>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                        	<button type="button"  class="btn nxtbtn btn-next pull-right btn-primary" >NEXT</button>
+                        </div>
+                    </div>
+                 </div>           
+         
+			</fieldset>
+            <fieldset>
+	           	<div class="userform-top">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" style="width: 40%"></div>
+                    </div>
+                    <div class="text-center completed">40 % Completed</div>
+                 </div>
+                 <div class="main-form">
+                 	<h2 class="head2" id="description_head"> Describe Your Items<span class="bordered"></span></h2>
+                 	<ul class="form-list">    
+                    	<li>       
+                            <textarea name="items_details" id="items_details" class="form-control" placeholder="Write a description of your items"></textarea>
+                        </li>        
+					</ul>
+                    
+                 </div>
+                 <div class="foram-footer">
+                 	<div class="row">
+                    	<div class="col-xs-6 col-sm-6">
+                        	<button type="button" class="btn prvbtn btn-previous btn-default">BACK</button>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                        	<button type="button" id="next" class="btn nxtbtn btn-next pull-right btn-primary">NEXT</button>
+                        </div>
+                    </div>
+                 </div> 
+			</fieldset>
+            <fieldset>
+            <div id="step2">
+            	<div class="userform-top">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" style="width: 50%"></div>
+                    </div>
+                    <div class="text-center completed">50 % Completed</div>
+                 </div>
+                 <div class="main-form">
+                 	<h2 class="head2" >Loading Type<span class="bordered"></span></h2>
+                 	<ul class="form-list">            
+                       <li>       
+                            <div id="step1_error"></div>
+                            <input id="full_load" class="magic-radio" type="radio" value="Full Loading"  name="loading_type" checked>
+                            <label for="full_load"> Full Loading </label>
+                       </li>
+                       <li>       
+                            <input id="mini_truck" class="magic-radio" type="radio" value="Part Loading" name="loading_type">
+                            <label for="mini_truck"> Part Loading </label>
+                       </li>
+                                           
+                    </ul>
+                 </div>
+                 <div class="foram-footer">
+                 	<div class="row">
+                    	 <div class="col-xs-6 col-sm-6">
+                        	<button type="button" class="btn prvbtn btn-previous btn-default">BACK</button>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                        	<button type="button"  class="btn nxtbtn btn-next pull-right btn-primary" >NEXT</button>
+                        </div>
+                    </div>
+                 </div>           
+            </div>
+			</fieldset>
+                   <fieldset>
+            <div id="step4">
+            	<div class="userform-top">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" style="width: 60%"></div>
+                    </div>
+                    <div class="text-center completed">70 % Completed</div>
+                 </div>
+                 <div class="main-form">
+                 	<h2 class="head2" >No of hours and time required ?<span class="bordered"></span></h2>
+                 	<ul class="form-list">            
+                       <li>  
+                        <div class="row">
+                            <div class="col-xs-6  col-sm-4">
+                            <label> Total Hours: </label>
+                            <input type="number" name="time" id="hours" style="min-width:40px">
+                          	
+                             </div>
+                      
+                    	<div class="col-xs-6 col-sm-4">
+                            <label> From: </label>
+                            <input type="time" name="from_time"  id="from_time" value = "00:00">
+                         </div>
+                         <div class="col-xs-6 col-sm-4">
+                            <label> To:   </label>
+                            <input type="time" name="to_time"  id="to_time" value = "00:00">
+                            </div>
+                            </div>
+                       </li>
+                                           
+                    </ul>
+                 </div>
+                 <div class="foram-footer">
+                 	<div class="row">
+                    	<div class="col-xs-6 col-sm-6">
+                        	<button type="button" class="btn prvbtn btn-previous btn-default">BACK</button>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                        	<button type="button"  class="btn nxtbtn btn-next pull-right btn-primary" >NEXT</button>
+                        </div>
+                    </div>
+                 </div>           
+            </div>
+			</fieldset>
+            
+            
+            <fieldset>
+            	<div class="userform-top">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" style="width: 90%"></div>
+                    </div>
+                    <div class="text-center completed">90 % Completed</div>
+                 </div>
+                 
+                 <div class="clearfix"></div>
+                 <div class="main-form">
+                 	<h2 class="head2">Anything Else We Should Know ?  <span class="bordered"></span></h2>
+                 	<ul class="form-list">            
+                        <li>       
+                          	<input class="magic-checkbox" type="checkbox" name="box" id="1"  onClick="final_box_option(this);">
+                            <label for="1" class="pull-left"></label>
+                            <label class="text" for="1"> Boxes</label>
+                       </li>
+    				   <li>       
+                          	<input class="magic-checkbox" type="checkbox" name="labour" id="2"  onClick="final_labour_option(this);">
+                            <label for="2" class="pull-left"></label>
+                            <label class="text" for="2"> labour</label>
+                       </li>
+                         <div class="main-form" id="final_box_option" style="display:none;">
+                            <label>No of boxes</label>
+                            <ul class="form-list">            
+                                <li>       
+                                    <input id="zero_fives" class="magic-radio" type="radio" value="0-5" name="no_of_box">
+                                    <label for="zero_fives">0 - 5</label>
+                               </li>
+                               <li>       
+                                    <input id="five_tens" class="magic-radio" type="radio" value="5-10" name="no_of_box">
+                                    <label for="five_tens"> 5 - 10</label>
+                               </li>
+                               <li>       
+                                    <input id="ten_fifteens" class="magic-radio" type="radio" value="10-15" name="no_of_box">
+                                    <label for="ten_fifteens"> 10 - 15 </label>
+                               </li>
+                               <li>       
+                                    <input id="fifteen_twants" class="magic-radio" type="radio" value="15-20" name="no_of_box">
+                                    <label for="fifteen_twants"> 15 - 20 </label>
+                               </li>
+                               <li>       
+                                    <input id="twantypluss" class="magic-radio" type="radio" value="20+" name="no_of_box">
+                                    <label for="twantyplussxxxxxx"> 20 + </label>
+                               </li>
+                            </ul>
+                         </div>
+                            <div class="main-form" id="final_labour_option" style="display:none;">
+                            <label>No of labour required </label>
+                            <ul class="form-list">            
+                               <li>       
+                                <input id="one_labor" class="magic-radio" type="radio" value="1" name="no_of_labor">
+                                <label for="one_labor">  1 </label>
+                               </li>
+                               <li>       
+                                    <input id="two_labor" class="magic-radio" type="radio" value="2" name="no_of_labor">
+                                    <label for="two_labor"> 2 </label>
+                               </li>
+                               <li>       
+                                    <input id="two_five" class="magic-radio" type="radio" value="2-5" name="no_of_labor">
+                                    <label for="two_five"> 2-5</label>
+                               </li>
+                              
+                                <li>       
+                                    <input id="five_plus" class="magic-radio" type="radio" value="5+" name="no_of_labor">
+                                    <label for="five_plus"> 5+ </label>
+                               </li>
+                            </ul>
+                         </div>
+                     
+                      
+                    </ul>
+                 </div>
+                 <div class="foram-footer">
+                 	<div class="row">
+                    	<div class="col-xs-6 col-sm-6">
+                        	<button type="button" class="btn prvbtn btn-previous btn-default">BACK</button>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                        	<button type="button" class="btn nxtbtn btn-next pull-right btn-primary">NEXT</button>
+                        </div>
+                    </div>
+                 </div>           
+            
+			</fieldset>
+            <fieldset>
+            	<div class="userform-top">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" style="width: 100%"></div>
+                    </div>
+                    <div class="text-center completed">100 % Completed</div>
+                 </div>
+                 <div class="main-form">
+                 <ul class="form-list"> 
+                 	<h2 class="head2">Shifting Date<span class="bordered"></span></h2>
+                
+                     	<li>
+                        <input type="text" onChange="next_enable_disable();" class="form-control input-lg datepicker2" id="datepicker2" name="shifting_date" placeholder="Enter Shifting Date">   
+                        </li>
+                 </ul>
+                 <div class="main-form" id="call_time">
+                  <ul class="form-list"> 
+                  <h3 class="head3"> Select suitable time to make a call to you <span class="bordered"></span></h3>
+                        <li>       
+                            <input id="any_time" class="magic-radio" type="radio" value="Any Time " name="call_times" checked>
+                            <label for="any_time">Any Time </label>
+                       </li>
+                       <li>       
+                            <input id="8am" class="magic-radio" type="radio" value="8AM-11AM" name="call_times">
+                            <label for="8am"> Morning  8 AM to 11 AM</label>
+                       </li>
+                       <li>       
+                            <input id="1pm" class="magic-radio" type="radio" value="1PM-2:30PM" name="call_times">
+                            <label for="1pm"> Lunch Time 1PM to 2:30 PM </label>
+                       </li>
+                       <li>       
+                            <input id="5pm" class="magic-radio" type="radio" value="5PM-9 PM" name="call_times">
+                            <label for="5pm"> Evening Time 5 PM to 9 PM </label>
+                       </li>
+                     </ul>
+                 </div>
+                 <div class="foram-footer">
+                 	<div class="row">
+                    	<div class="col-xs-6 col-sm-6">
+                        	<button type="button" class="btn prvbtn btn-previous btn-default">BACK</button>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                        	<!--<button type="button" class="btn nxtbtn btn-next pull-right btn-primary" id="date_step" disabled>NEXT</button>-->
+                            <button type="submit" class="btn pull-right btn-primary" id="date_step" disabled>Submit</button>
+                        </div>
+                    </div>
+                 </div>           
+            
+			</fieldset>
+         <!--   <fieldset>
+            	<div class="userform-top">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" style="width:80%"></div>
+                    </div>
+                    <div class="text-center completed">80 % Completed</div>
+                 </div>
+                 <div class="main-form">
+                 	<span><strong>Pick-up Location</strong></span>
+                 	<ul class="form-list">            
+                        <li>       
+                           <input type="text" name="shifting_from" id="shifting_from" class="form-control" value="" /> 
+                          <br>
+                           	<input type="text" name="shifting_from_locality" id="shifting_from_locality" class="form-control" placeholder="Locality" /> 
+                           
+                        </li>
+                       
+                    </ul>
+                    <span><strong>Drop-off Location</strong></span>
+                 	<ul class="form-list">            
+                        <li>       
+                           <input type="text" name="shifting_to" id="shifting_to" class="form-control" value="" />   
+                           <br>  
+                           	<input type="text" name="shifting_to_locality" id="shifting_to_locality" class="form-control" placeholder="Locality" /> 
+                           
+                        </li>
+                       
+                    </ul>
+                 </div>
+                 <div class="foram-footer">
+                 	<div class="row">
+                    	<div class="col-xs-6 col-sm-6">
+                        	<button type="button" class="btn prvbtn btn-previous btn-default">BACK</button>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                        	<button type="button" class="btn nxtbtn btn-next pull-right btn-primary">NEXT</button>
+                        </div>
+                    </div>
+                 </div>           
+            
+			</fieldset> -->
+            
+            
+           <!-- <fieldset>
+            	<div class="userform-top">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" style="width:90%"></div>
+                    </div>
+                    <div class="text-center completed">90 % Completed</div>
+                 </div>
+                 <div class="main-form">
+                 	<h2 class="head2">Contact Information <span class="bordered"></span></h2>
+                 	<ul class="form-list">            
+                       <li>       
+                            <input type="text" class="form-control input-lg" id="name" name="name" placeholder="Enter Your Name" required>   
+                        </li>
+                         <li>       
+                             <input type="number" class="form-control input-lg" id="mobile" name="mobile" placeholder="Enter Mobile" required>   
+                        </li>
+                         <li>       
+                            <input type="email" class="form-control input-lg" id="email" name="email" placeholder="Enter Email">   
+                        </li> 
+                         
+                         <li>       
+                            <input type="text" class="form-control input-lg" id="captcha" name="captcha"  placeholder="Captcha" required>
+                        </li>
+                        <li>
+						   
+                        </li>
+                       
+                    </ul>
+                 </div>
+                 <div class="foram-footer">
+                 	<div class="row">
+                    	<div class="col-xs-6 col-sm-6">
+                        	<button type="button" class="btn prvbtn btn-previous btn-default">BACK</button>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                        	
+                            <button type="submit" class="btn pull-right btn-primary">Submit</button>
+                        </div>
+                    </div>
+                 </div>           
+            
+			</fieldset>-->
+         </form>
+    </div>
+</div>
+	
+
+<script type="text/javascript">
+	$(function() {
+	function log( message ) {
+	$( "#shifting_from" ).text(message);
+	
+	
+	}
+	$( "#shifting_from" ).autocomplete({
+	source: servicess_name,
+	minlength: 1,
+	select: function( event, ui ) {
+	log( ui.item ?
+	"Selected: " + ui.item.value :
+	"Nothing selected, input was " + this.value );
+	
+	
+	}
+	});
+	});
+</script>
+<script type="text/javascript">
+	$(function() {
+	function log( message ) {
+	$( "#shifting_to" ).text(message);
+	
+	
+	}
+	$( "#shifting_to" ).autocomplete({
+	source: servicess_name,
+	minlength: 1,
+	select: function( event, ui ) {
+	log( ui.item ?
+	"Selected: " + ui.item.value :
+	"Nothing selected, input was " + this.value );
+	
+	
+	}
+	});
+	});
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="js/Backstretch.min.js"></script>
+<script src="#"></script>
+<script src="js/letest.js"></script>
+</body>
+<script>
+$("#OTHERBHK").click(function(){
+    $("textarea.othemessage").toggle(1000);
+});
+$("#1BHK").click(function(){
+    $("textarea.othemessage").hide(1000);
+});
+
+
+
+
+</script> 
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+<script>
+ $( function() {
+ $( "#datepicker2" ).datepicker({
+          minDate: 0
+       });
+ });
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64590090-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>
